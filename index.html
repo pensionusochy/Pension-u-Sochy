@@ -172,7 +172,8 @@
       justify-content: center;
       text-align: center;
       color: #fff;
-      background: linear-gradient(rgba(27, 56, 43, 0.45), rgba(27, 56, 43, 0.55)), url('https://lh3.googleusercontent.com/d/144-xstQ1g_y89mH0fWJ8u_FfP6N14P6w') center/cover no-repeat;
+      /* Odkaz na fotku nahranou přímo v repozitáři */
+      background: linear-gradient(rgba(27, 56, 43, 0.35), rgba(27, 56, 43, 0.45)), url('uvod-pension.jpg') center/cover no-repeat;
     }
 
     .hero-content {
@@ -435,7 +436,7 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 3rem; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .nav-links { display: none; } /* Jednoduché skrytí pro mobil bez složitého JS */
+      .nav-links { display: none; }
     }
   </style>
 </head>
@@ -628,10 +629,9 @@
     </div>
   </footer>
 
-  <!-- LEHKÝ JAVASCRIPT PRO SMOOTH SCROLL & ZMĚNU HEADERU -->
+  <!-- LEHKÝ JAVASCRIPT PRO SMOOTH SCROLL -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Příklad jednoduchého posunu a interakcí bez použití frameworků
       const links = document.querySelectorAll('a[href^="#"]');
       
       links.forEach(anchor => {
