@@ -1,2 +1,1278 @@
-Pension U Sochy
-Rudka u Kunštátu
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pension U Sochy | Rudka u Kunštátu</title>
+    <meta name="description" content="Klidné rodinné ubytování v srdci Moravy. Tradiční pension v Rudce u Kunštátu s rodinnou atmosférou a 10 cozy pokoji.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-main: #FDFBF7;
+            --bg-secondary: #F4EFE6;
+            --bg-card: #FFFFFF;
+            --text-main: #2C322E;
+            --text-muted: #5F6862;
+            --primary: #2C4A3E;
+            --primary-hover: #1E342B;
+            --accent: #9E7B56;
+            --accent-light: #EFE7DC;
+            --border: #E5DEC9;
+            --shadow: 0 10px 30px rgba(44, 74, 62, 0.05);
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+        }
+
+        .text-center { text-align: center; }
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title { font-size: 3.25rem; }
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #FFFFFF;
+            padding: 1rem 2.2rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            border: 1px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: #FFFFFF;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(229, 222, 201, 0.5);
+            padding: 1.25rem 0;
+        }
+
+        header.scrolled {
+            padding: 0.85rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.02em;
+        }
+
+        .logo span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: -4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--primary);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 900px) {
+            .hamburger { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-main);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            .nav-btn-mobile {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding-top: 80px;
+            background: linear-gradient(rgba(20, 35, 29, 0.45), rgba(20, 35, 29, 0.45)), 
+                        url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1.5rem;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: #EFE7DC;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #F4EFE6;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title { font-size: 5rem; }
+            .hero-description { font-size: 1.5rem; }
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .about-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--accent);
+            color: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            display: none;
+        }
+
+        @media (min-width: 600px) {
+            .about-image-badge { display: block; }
+        }
+
+        .about-image-badge .number {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .about-image-badge .text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .features {
+            background-color: var(--bg-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 2.5rem 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-light);
+            color: var(--primary);
+            border-radius: 50%;
+        }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        .feature-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .rooms-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .room-card {
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .room-image {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .room-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .room-card:hover .room-image img {
+            transform: scale(1.05);
+        }
+
+        .room-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .room-title {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .room-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .room-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .room-features li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .room-features li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .room-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .room-price {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .room-price span {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .surroundings {
+            background-color: var(--bg-secondary);
+        }
+
+        .surroundings-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .surroundings-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .surroundings-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .surrounding-item {
+            background: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .surrounding-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .surrounding-info {
+            padding: 1.5rem;
+        }
+
+        .surrounding-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .surrounding-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .surrounding-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 220px;
+            }
+            .gallery-item.wide { grid-column: span 2; }
+            .gallery-item.tall { grid-row: span 2; }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item { height: 100%; }
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .modal-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--accent-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .contact-detail h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p, .contact-detail a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-detail a:hover {
+            color: var(--primary);
+        }
+
+        .map-container {
+            margin-top: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            height: 220px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .booking-form {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background-color: var(--bg-main);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #FFFFFF;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        .form-message {
+            display: none;
+            padding: 1rem;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #EFE7DC;
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: #FFFFFF;
+        }
+
+        .footer-logo span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            margin-top: -4px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-nav a {
+            color: #EFE7DC;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #A3B8AD;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Pension U Sochy
+                <span>Rudka u Kunštátu</span>
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#o-penzionu">O penzionu</a></li>
+                <li><a href="#ubytovani">Ubytování</a></li>
+                <li><a href="#okoli">Okolí</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li class="nav-btn-mobile">
+                    <a href="#kontakt" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Rezervovat pobyt</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Rudka u Kunštátu</span>
+            <h1 class="hero-title">PENSION U SOCHY</h1>
+            <p class="hero-description">Klidné rodinné ubytování v srdci Moravy.</p>
+            <a href="#kontakt" class="btn">Rezervovat pobyt</a>
+        </div>
+    </section>
+
+    <section id="o-penzionu" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80" alt="Pension U Sochy vnější pohled">
+                    <div class="about-image-badge">
+                        <div class="number">10</div>
+                        <div class="text">Útulných pokojů</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="subtitle">Tradiční Pohostinnost</span>
+                    <h2 class="section-title">Náš příběh a rodinná atmosféra</h2>
+                    <p>Pension U Sochy navazuje na poctivou tradici rodinného pohostinství s kořeny sahajícími do 60. až 80. let minulého století. Tento retro odkaz prezentujeme s respektem, elegancí a nadčasovým komfortem.</p>
+                    <p>Nabízíme ubytování v 10 vkusně zařízených pokojích, kde naleznete dokonalý klid od shonu moderní doby. Náš penzion není masovým resortem ani rušným wellness hotelem – jsme poctivý rodinný podnik, který klade důraz na osobní přístup, čisto a vřelou atmosféru.</p>
+                    <p>Nacházíme se v malebné vesničce Rudka u Kunštátu, obklopeni lesy a krásami Moravského krasu, což z nás dělá ideální základnu pro vaše výlety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding features">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3.5rem;">
+                <span class="subtitle">Proč navštívit právě nás</span>
+                <h2 class="section-title">Pohodlí venkovského sídla</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+                    </div>
+                    <h3>10 Pokojů</h3>
+                    <p>Komfortní a světlé pokoje navržené pro váš dokonale klidný spánek.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Rodinná atmosféra</h3>
+                    <p>Vřelá pohostinnost, osobní přístup a prostředí, kde se budete cítit jako doma.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+                    </div>
+                    <h3>Krásné okolí</h3>
+                    <p>Příroda Moravského krasu, turistické a cyklistické trasy přímo za domem.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                    </div>
+                    <h3>Parkování zdarma</h3>
+                    <p>Bezpečné soukromé parkoviště přímo v areálu penzionu bez poplatků.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubytovani" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3.5rem;">
+                <span class="subtitle">Náš ceník & nabídka</span>
+                <h2 class="section-title">Útulné ubytování</h2>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Dvoulůžkový pokoj">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Dvoulůžkový pokoj</h3>
+                        <p class="room-description">Ideální volba pro páry hledající klid a romantiku v přírodě.</p>
+                        <ul class="room-features">
+                            <li>Manželská postel z masivu</li>
+                            <li>Vlastní koupelna se sprchou</li>
+                            <li>Výhled do zahrady nebo lesa</li>
+                            <li>Wi-Fi připojení zdarma</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">od 1 400 Kč <span>/ noc</span></div>
+                            <a href="#kontakt" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" alt="Rodinný pokoj">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Rodinný pokoj</h3>
+                        <p class="room-description">Prostranný pokoj vhodný pro rodiny s dětmi či skupiny přátel.</p>
+                        <ul class="room-features">
+                            <li>Manželská postel + 2 samostatná lůžka</li>
+                            <li>Prostorná koupelna</li>
+                            <li>Posezení s křesly</li>
+                            <li>Wi-Fi & TV</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">od 2 200 Kč <span>/ noc</span></div>
+                            <a href="#kontakt" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Apartmán">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Apartmán U Sochy</h3>
+                        <p class="room-description">Dvoupokojový apartmán s vlastní kuchyňkou pro maximální soukromí.</p>
+                        <ul class="room-features">
+                            <li>Oddělená ložnice a obývací část</li>
+                            <li>Plně vybavený kuchyňský kout</li>
+                            <li>Koupelna s vanou</li>
+                            <li>Soukromý balkónek</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">od 2 800 Kč <span>/ noc</span></div>
+                            <a href="#kontakt" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="okoli" class="section-padding surroundings">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3.5rem;">
+                <span class="subtitle">Tipy na výlety</span>
+                <h2 class="section-title">Objevíte krásy v okolí</h2>
+            </div>
+
+            <div class="surroundings-grid">
+                <div class="surrounding-item">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Rudka u Kunštátu" class="surrounding-img">
+                    <div class="surrounding-info">
+                        <span class="surrounding-tag">Přímo v obci</span>
+                        <h3>Jeskyně Blanických rytířů</h3>
+                        <p>Unikátní pískovcová jeskyně s monumentálními sochami blanických rytířů od sochaře Stanislava Rolínka a Burianovou rozhlednou.</p>
+                    </div>
+                </div>
+
+                <div class="surrounding-item">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80" alt="Kunštát" class="surrounding-img">
+                    <div class="surrounding-info">
+                        <span class="surrounding-tag">3 km od penzionu</span>
+                        <h3>Město Kunštát & Zámek</h3>
+                        <p>Historické město známé svou hrnčířskou tradicí a státním zámkem Kunštát s jedním z nejstarších psích hřbitovů v Evropě.</p>
+                    </div>
+                </div>
+
+                <div class="surrounding-item">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Moravský kras" class="surrounding-img">
+                    <div class="surrounding-info">
+                        <span class="surrounding-tag">Do 25 minut</span>
+                        <h3>Moravský kras & Macocha</h3>
+                        <p>Světově známá propast Macocha, Punkevní jeskyně s plavbou na lodičkách a desítky kilometrů značených cyklostezek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3.5rem;">
+                <span class="subtitle">Fotogalerie</span>
+                <h2 class="section-title">Nahlédněte k nám</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item wide" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Pension vnější pohled">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Pokoj interiér">
+                </div>
+                <div class="gallery-item tall" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Okolní příroda">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="Koupelna">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Zahrada penzionu">
+                </div>
+                <div class="gallery-item wide" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Krajina Moravského krasu">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-img" id="modalImg">
+    </div>
+
+    <section id="kontakt" class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div>
+                        <span class="subtitle">Kde nás najdete</span>
+                        <h2 class="section-title">Kontakt & Adresa</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Máte dotaz k ubytování nebo si přejete rezervovat termín? Neváhejte nás kontaktovat telefonicky, e-mailem nebo přes formulář.</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Adresa</h4>
+                            <p>Pension U Sochy<br>Rudka u Kunštátu 45<br>679 72, Jihomoravský kraj</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+420123456789">+420 123 456 789</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:info@pensionusochy.cz">info@pensionusochy.cz</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Map -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10383.056976694384!2d16.516086!3d49.518671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471285223e75e9f1%3A0x8613fb79694ec6bb!2sRudka%2C%20679%2072%20Kun%C5%A1t%C3%A1t!5e0!3m2!1scs!2scz!4v1700000000000!5m2!1scs!2scz" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="booking-form">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Nezávazná poptávka</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Vyplňte formulář a my se vám ozveme s potvrzením dostupnosti.</p>
+                    
+                    <div id="formSuccess" class="form-message">
+                        Děkujeme za vaši poptávku! Brzy vás budeme kontaktovat.
+                    </div>
+
+                    <form id="reservationForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Jméno a příjmení</label>
+                            <input type="text" id="name" class="form-control" required placeholder="Jan Novák">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" required placeholder="jan@novak.cz">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="+420 777 123 456">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="arrival">Příjezd</label>
+                                <input type="date" id="arrival" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="departure">Odjezd</label>
+                                <input type="date" id="departure" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room">Typ pokoje</label>
+                            <select id="room" class="form-control">
+                                <option value="dvouluzkovy">Dvoulůžkový pokoj</option>
+                                <option value="rodinny">Rodinný pokoj</option>
+                                <option value="apartman">Apartmán U Sochy</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Poznámka / Zpráva</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Máte speciální přání nebo cestujete s dětmi/domácím mazlíčkem?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%;">Odeslat poptávku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Pension U Sochy
+                    <span>Rudka u Kunštátu</span>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#o-penzionu">O penzionu</a></li>
+                    <li><a href="#ubytovani">Ubytování</a></li>
+                    <li><a href="#okoli">Okolí</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> Pension U Sochy, Rudka u Kunštátu. Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery Modal
+        function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const img = element.querySelector('img');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Form handling simulation
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formSuccess = document.getElementById('formSuccess');
+            const form = document.getElementById('reservationForm');
+            
+            formSuccess.style.display = 'block';
+            form.reset();
+            
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
